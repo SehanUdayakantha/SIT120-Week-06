@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script> 
+    </head>
+    <body>
+        <div id="app">
+         <h1>Password</h1>
+         <input type="password" v-model="password"> 
+         <p>{{ password }}</p>
+         <h1>E-Mail</h1>
+         <input type="text" v-model="email">
+         <p>{{ email }}</p>
+         <h1>CheckBox</h1>
+         <input type="checkbox" v-model="checked" value="check01">
+         <label for="check01">check01</label>
+         <input type="checkbox" v-model="checked" value="check02">
+         <label for="check02">check02</label>
+         <input type="checkbox" v-model="checked" value="check03">
+         <label for="check03">check03</label>
+         <p>Selected: {{ checked }}</p>
+         <h1>Choose!</h1>
+         <select v-model="choosen">
+            <option v-for="choosen in choices" v-bind:value="choosen.id">
+                {{ choosen.text }}
+            </option>
+        </select>
+        <p>Choosen: {{ choosen }}</p>
+        </div>
+        <script src="Week06.js"></script>
+    </body>
+</html>        
